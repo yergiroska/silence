@@ -1,0 +1,736 @@
+/*CSS style*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Navegacion menu fijo*/
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #f0f0f0;
+    position: fixed;
+    display: flex;
+    z-index: 6;
+    justify-content: center;
+    align-items:center;
+}
+
+nav .logo {
+    width: 10%;
+}
+
+.logo img {
+    height: 50px;
+    margin: 5px 0px 5px 70px;
+}
+
+nav .menu {
+    width: 85%;
+    text-align: right;
+}
+
+.menu a {
+    color:black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.menu a:hover {
+    color: #f5333f;
+}
+
+/*Inicio del menu burguer*/
+#responsive {
+    display: none;
+}
+.burguer_icon {
+    position: absolute;
+    top: 36%;
+    right: 44px;
+    /*colocar la etiqueta en la posicion que quiera*/
+    width: 35px;
+    line-height: 1.1rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.checkbox {
+    display: none;
+}
+
+
+.burguer_icon::before {
+    content: " ☰ ";
+    font-size: 62px;
+    color: rgb(199, 25, 25);
+}
+
+#menu {
+    position: absolute;
+    /* top: 68px; */
+    left: -200px;
+    background-color: #f2f2f2;
+    width: 200px;
+    height: 100vh;
+    animation: inicio_desplegable;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    line-height: 1vh;
+    padding: 20px;
+    margin-left: 2px;
+}
+
+.checkbox:checked ~ #menu {
+    left: 0px;
+    animation: desplegable;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes desplegable {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes inicio_desplegable {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+/*Fin del menu burguer*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-image: url("../images/headerr_original.jpg");
+    background-size: cover;
+    margin-top: 0px;
+}
+
+.container {
+    width: 50vw;
+    height: auto;
+    padding: 250px 10px 20px 150px;
+}
+
+header a.btn1{
+    display: inline-block;
+    padding: 20px 70px 20px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    align-items: center;
+    margin-right: 30px;
+
+}
+
+header a.btn2{
+    display: inline-block;
+    padding: 20px 70px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    align-items: center;
+
+}
+
+header a:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+
+}
+
+header a.btn2:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #fff;
+
+}
+
+h1 {
+    display: flex;
+    font-size: 30px;
+    line-height: 1rem;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    top: -220px;
+    right: 85px;
+}
+
+.info {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    top: -220px;
+    right: 85px;
+}
+
+section {
+    width: 100%;
+    margin: 0;
+}
+
+.titulo {
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 15%;
+    margin-bottom: 100px;
+}
+
+.titulo h2 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo p {
+    font-size: 18px;
+    line-height: 28px;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
+    color: #939495;
+}
+
+#coleccion_car {
+    margin: 0 auto;
+    width: 65%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 10vh;
+}
+
+.vehiculos {
+    margin: auto;
+    display: block;
+    margin-top: 60px;
+}
+
+.vehiculos img {
+    width: 350px;
+}
+
+.descripcion h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.descripcion{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    line-height: 20px;
+    margin-top: -20px;
+}
+
+.botones{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+}
+
+.subscripcion {
+    border: #e3e0d9;
+    background-color: #e3e0d9;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.subscripcion:hover{
+    border:1px solid#e3e0d9;
+    background-color: #fff;
+    color: #f5333f;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 40px;
+}
+
+.propiedad {
+    border: 1px solid #e3e0d9;
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.propiedad:hover{
+    color: #f5333f;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 40px;
+}
+
+.siguiente {
+    width: 65%;
+    margin-left: 30px;
+}
+
+.confi {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+}
+
+.ver {
+    text-decoration: none;
+    font-size: 14px;
+    color: #f5333f;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.batery {
+    width: 65%;
+    display: flex;
+    margin: 30vh auto 0;
+}
+
+#articulo1 {
+    background-color: #f3f2f0;
+    border-radius: 10px;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 3vh;
+    margin-right: 15px;
+}
+
+#articulo1 input {
+    width: 210px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #f5333f;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+
+#articulo1 img {
+    width: 400px;
+    margin: 3vh 0 1vh 0;    
+}
+
+.parra_art {
+    font-size: 18px;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
+    color: #939495;
+}
+
+
+.bloque_batery  {
+    width: 50%
+}
+
+#articulo2 {
+    background-image: url(../images/quadre-baterias.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 33vh;
+    background-color: #f3f2f0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#articulo3 {
+    background-image: url(../images/quadre-iphone_App.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 33vh;
+    background-color: #f3f2f0;
+    border-radius: 10px;
+}
+
+.bloque_bat {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3vw;
+    line-height: 3vh;
+}
+
+.descubre_mas {
+    color: red
+}
+
+.formulario {
+    width: 100%;
+    background-color: #eceae7;
+    margin: 10vh 0;
+}
+
+.reserva {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    line-height: 45px;
+    margin-bottom: 40px;
+}
+
+.reserva_event {
+    font-size: 40px;
+    color: #000000;
+    position: relative;
+    padding: 2px;
+    top: 25px;
+    padding-bottom: 50px;
+}
+
+#preparate {
+    display: flex;
+}
+
+
+#plan img {
+    border-radius: 4vh;
+    margin-left: 15vh;
+}
+
+#datos {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    height: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-bottom: 5vh;
+}
+
+.preparado {
+    color: #000000; 
+    margin-left: 5px; 
+    font-size: 25px;
+}
+
+#datos select {
+    width: 42vh;
+    border: 0;
+    border-bottom: 1px solid #939495;
+    line-height: 4vh;
+    padding: 20px 10px;
+    margin: 0 auto;
+    color: #939495;
+}
+
+#datos input {
+    border: 0;
+    width: 40vh;
+    border-bottom: 1px solid #939495;
+    line-height: 4vh;
+    padding: 15px 10px;
+    margin: 0 auto;
+}
+
+#datos input:hover,
+#datos select:hover {
+    border-bottom: 2px solid black;
+}
+
+
+#datos input:focus,
+#datos select:focus{
+    outline: none;
+    border: 0;
+    border-bottom: 1.5px solid #f5333f;
+}
+
+#caja_politica {
+    width: 40vh;
+    margin: 2vh auto;
+}
+
+#caja_politica input {
+    display: inline;
+    width: 10px;
+}
+
+#datos input[type="submit"] {
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    width: 65%;
+    margin-left: 4vh;
+}
+
+#datos input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 5px;
+    width: 65%;
+    margin-left: 4vh;
+    border: 1px solid #939495;
+}
+
+footer h3 {
+    color: #5f5f5f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer div input {
+    background-color: black;
+    color: #939495;
+    border: 0;
+    border-bottom: 1px solid #939495;
+    margin-bottom: 1vh;
+}
+
+footer div input:hover {
+    background-color: #ffffff;
+}
+
+
+.legales {
+    display: grid;
+    background-color: black;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+    grid-template-columns: 10% 10% 15% 10% 30%;
+    column-gap: 5%;
+}
+
+
+.legales ul, li, a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 20px;
+    display: inline-block;
+    margin-left: -20px;
+}
+
+
+@media (width < 600px) {
+    #responsive {
+        display: block;
+    }
+    
+    nav {       
+        width: 100%;
+        flex-direction:column;
+		height:auto;
+        position: fixed;
+        margin-top: -80px;
+    }
+
+    nav .menu {
+        display: none;
+    }
+
+    .logo img {
+        height: 50px;
+        margin: 5px 5px 5px 25px;
+    }
+
+    nav .logo {
+        width: 100%;
+    }
+
+    header{
+        display: none;
+    }
+
+    #coleccion_car {
+        width: 65%;
+        display: block;
+    }
+
+    .batery {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #articulo1 {
+        width: 100%;
+        margin-top: -100px;
+        border-radius: 20px;
+    }
+
+    .bloque_batery  {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .formulario {
+        margin: 0 auto;
+        text-align: center;
+        background-color: #f3f2f0;
+        padding: 120px 0;
+        margin-bottom: 50px;
+    }   
+
+    #plan img {
+        display: none;
+    }
+
+
+    .reserva_event {
+        font-size: 40px;
+        line-height: 50px;
+        margin-top: -90px;
+        margin-left: 20%;
+    }
+    
+
+    
+    .reserva {
+       margin-left: 110px;
+    }   
+
+}
+
+@media (width < 700px) {
+    #responsive {
+        display: block;
+    }
+
+    nav {       
+        width: 100%;
+        flex-direction:column;
+		height:auto;
+        position: fixed;
+        margin-top: -80px;
+    }
+
+    nav .menu {
+        display: none;
+    }
+
+    .logo img {
+        height: 50px;
+        margin: 5px 5px 5px 25px;
+    }
+
+    nav .logo {
+        width: 100%;
+    }
+
+    header{
+        display: none;
+    }
+    
+    .vehiculos img {
+        width: 90%;
+    }
+
+    .batery {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #articulo1 {
+        width: 100%;
+        margin-top: -100px;
+        border-radius: 20px;
+    }
+
+    .bloque_batery  {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .formulario {
+        margin: 0 auto;
+        text-align: center;
+        background-color: #f3f2f0;
+        padding: 120px 0;
+        margin-bottom: 50px;
+    }   
+
+    #plan img {
+        display: none;
+    }
+
+
+    .reserva_event {
+        font-size: 40px;
+        line-height: 50px;
+        margin-top: -90px;
+        margin-left: 20%;
+    }   
+
+    
+    .reserva {
+       margin-left: 110px;
+    }   
+}
+
